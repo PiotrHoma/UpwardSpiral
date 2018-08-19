@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"lang="pl-PL">
+
+	<link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+ 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400i" rel="stylesheet"> 
+
+<head>
+	<title>Upward Spiral</title>
+</head>
+
+<body>
+	<a href="setgoal"><embed class="logo"src="../img/logo.png"></a>
+
+   <form th:action="@{/logout}" method="get">
+         <button class="button logout" id="hide" type="Submit">Logout</button>
+   </form>
+   
+   
+<div class="addgoalcontainer">
+	
+	    <h4 class = "addgoalheader"> Here You Can Edit Your Goal</h4>
+	
+<form th:action="@{../user/updateGoal}">
+		
+	  <div class="input-field" style= "display: none">
+        <input name="id" type="text" th:value="${Id}" readonly>
+        <label for="id">Id</label>
+      </div>
+	  <div class="input-field" style= "display: none">
+        <input name="user" type="text" th:value="${User}" readonly>
+        <label for="user">user</label>
+      </div>
+      
+        <input class="nameimput" name="name" type="text" th:value="${Name}" th:placeholder="Name">    
+        <textarea class="descriptionimput" name="description" th:inline="text" th:placeholder="Description">[[${Goal}]]</textarea><br>
+        
+        
+	<button class="button savebutton" type="submit">Save</button>
+	
+	<div class="sec">
+		<a href="displayGoals" class="button" style="margin-top: 10px;">View All</a>
+	</div>
+
+</form>
+</div>
+</body>
+</html>

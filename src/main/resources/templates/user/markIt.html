@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl-PL">
+
+<link th:href="@{/css/custom.css}" rel="stylesheet" media="screen" />
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400i" rel="stylesheet"> 
+
+<head>
+    <title>Upward Spiral</title>
+</head>
+
+<body>
+	<a href="setgoal"><embed class="logo"src="../img/logo.png"></a>
+
+	<form th:action="@{/logout}" method="get">
+         <button class="button logout" id="hide" type="Submit">Logout</button>
+    </form>
+    <h1 class="form-signin-heading">Mark It!</h1><br><br>
+
+    <div class="greetings"><a th:utext="${Name}"></a></div>
+
+<div class="markform">
+
+ <form th:action="@{../user/saveMark}" method="post">
+
+            <div class="input-field" style="display: none">
+                <input name="id" type="text" th:value="${Goal}" readonly>
+                <label for="id">Id</label>
+            </div>
+            <div class="input-field" style="display: none">
+                <input name="name" type="text" th:value="${Name}" readonly>
+                <label for="name">Name</label>
+            </div>
+
+
+		<label class="containerradio">1
+  			<input type="radio"name ="mark" value ="1">
+  			<span class="checkmark"></span>
+		</label>
+		<label class="containerradio">2
+  			<input type="radio"name ="mark" value ="2">
+  			<span class="checkmark"></span>
+		</label>
+		<label class="containerradio">3
+ 			<input type="radio"name ="mark" value ="3">
+  			<span class="checkmark"></span>
+		</label>
+		<label class="containerradio">4
+ 	 		<input type="radio"name ="mark" value ="4">
+  			<span class="checkmark"></span>
+		</label>
+		<label class="containerradio">5
+  			<input type="radio"name ="mark" value ="5">
+  			<span class="checkmark"></span>
+		</label>
+
+            <button class="button logbutton smaller" type="submit">Save</button>
+  </form>
+    </div>
+</body>
+
+</html>
