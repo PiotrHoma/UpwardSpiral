@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"lang="pl-PL">
+
+	<link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+ 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400i" rel="stylesheet"> 
+	
+<head>
+	<title>Upward Spiral</title>
+</head>
+
+<body>
+	<a href="setgoal"><embed class="logo"src="../img/logo.png"></a>
+
+   <form th:action="@{/logout}" method="get">
+         <button class="button logout" id="hide" type="Submit">Logout</button>
+   </form>
+   
+	<h2 class="form-signin-heading">Your Goals</h2><br><br>
+<table>
+	  <col span="1" class="wide">
+	  <col span="1" class="wide2">
+	  <col span="1" class="wide3">
+	  <col span="1" class="wide4">
+	  <col span="1" class="wide5">
+	  
+      <tr>
+         <th>Name</th>
+         <th>Description</th>
+      </tr>
+	<tr class="table" th:each="Goal: ${Goals}">
+	 	<td id="myModal" class = "withborders1" th:text="${Goal.name}"></td>	 	
+	 	<td class = "withborders2" th:text="${Goal.description}"></td>
+	 	<td class = "borderless first"><a th:href = "@{deleteGoal(id=${Goal.id})}" class="button insidetable" onclick="myFunction()">Delete</a></td>
+	 	<td class = "borderless"><a th:href = "@{showUpdate(id=${Goal.id})}" class="button insidetable">Edit</a></td>
+	 	<td class = "borderless"><a th:href = "@{graph(id=${Goal.id})}" class="button insidetable">Progress</a></td>
+	 </tr>
+</table><br>
+<a href="setgoal" class="button addbutton">Add Goal</a>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+@charset "ISO-8859-1";
+
+
+.nav-wrapper {
+    background-color: #ad1457  !important;
+    font-size: 14px;
+    font-weight: bold;
+  }
+ 
+body{
+background-color: #2C81FF;
+}
+
+.button {
+    background-color: #EBE9DF;
+    border: none;
+    border-radius:2em;
+    color: #3c577f;
+    padding: 8px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    font-family: 'Fira Sans Condensed', sans-serif;
+	font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+.button:hover {
+	background-color: #7A60CC;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+     text-decoration: none;
+}
+
+.logbutton{
+	position: relative;
+	left: 96px;
+	top:10px;
+	font-style: normal;
+	font-family: Tahoma;
+	
+	
+}
+.smaller{
+	left: 102px;
+	padding: 6px 32px;
+}
+.addbutton{
+	position: relative;
+	left: 5%;
+}
+.regbutton, .savebutton{
+	position: relative;
+	left: 64px;
+}
+.contbuttons{
+	position: relative;
+	left: 315px;
+	top: -50px;
+	margin-left: 90px;
+}
+.sec{
+	position: relative;
+	margin-left: 580px;
+	top: -46px;
+}
+.about{
+	position: absolute;
+	left:10px;
+	bottom:10px;
+	
+}
+@media screen and (min-width: 1100px) and (max-width: 4000px) {
+  #hide{ display: block; }  /* show it on smaller screen */
+}
+@media screen and (min-width: 0px) and (max-width: 1099px) {
+  #hide{ display: none; }   /* hide it on larger screens */
+}
+.insidetable{
+    padding: 5px 20px;
+	border-radius:none;
+	font-size: 16px;	
+}
+.newposition1{
+	margin-left:300px;
+}
+.tt{
+	border-radius:0;
+	display:inline-block;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; 
+}
+.login {
+  background: #3C577F;
+  border: none;
+  border-radius: 6px;
+  height: 277px;
+  margin: 20px auto 0;
+  width: 298px;
+  position: relative;
+  top: 9em;
+}
+.log2{
+	  height: 320px;
+}
+
+.form-signin-heading {
+  position:relative;
+  top:20px;
+  text-align:center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  color: #EBE9DF;
+  margin-top:5%;
+}
+.head{
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #EBE9DF;
+  text-align:center;
+  
+}
+.para{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  color: #EBE9DF;
+  text-align:center;
+}
+.textcont{
+	position:relative;
+	top:3em;
+	width:45%;
+	margin: 0px auto 0;
+	
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #EBE9DF;
+    position:relative;
+ 	top:-10px;
+ 	border-radius:2em;
+ 	
+}
+.reg{
+	position:relative;
+	top: 10px;
+}
+.greetings{
+	  font-family: 'Oswald', sans-serif;
+	  font-size: 24px;
+	  color: #EBE9DF;
+	  text-align: center;
+	  position:relative;
+	  bottom: 5px;
+	  margin-top: 40px
+}
+.greetings2{
+	  font-family: 'Oswald', sans-serif;
+	  font-size: 24px;
+	  color: #EBE9DF;
+	  text-align: center;
+	  position:relative; 
+	  left: -330px;
+	  top: 90px;
+}
+
+.addgoalheader{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	color: #EBE9DF;
+	margin: 0px;
+	position:relative;
+	bottom: -20px;
+}
+.logout{
+	position:absolute;
+	right:10px;
+	top:5px;
+}
+img{
+	width:100%;
+	position:absolute;
+	top:-240px;
+	left:0px;
+	z-index:-1;
+}
+.error{
+	font-size: 20; 
+	color: #FF1C19;
+}
+.confirmation{
+		position:relative;
+		left: 100px;
+		top:-10px;
+		font-family: 'Oswald', sans-serif;
+	  	font-size: 16px;
+	  	color: #4EFF39;
+}
+.withborders1{
+    height: 50px;
+    border: 1px solid #efdac7;
+    vertical-align: middle;
+    border-right: solid 1px #efdac7; 
+  	border-left: solid 1px #efdac7;
+  	font-family: 'Oswald', sans-serif;	
+  	background-color:#3c577f;
+  	color: #EBE9DF;
+  	padding-left: 8px;
+  	max-width: 350px;
+  	word-wrap: break-word;
+    overflow-wrap: break-word;
+  	
+}
+.withborders2{
+    height: 50px;
+    border: 1px solid #efdac7;
+    vertical-align: middle;
+    border-right: solid 1px #efdac7; 
+  	border-left: solid 1px #efdac7;
+  	font-family: 'Oswald', sans-serif;
+  	background-color:#3c577f;
+  	color: #EBE9DF;	
+  	padding-left: 8px;
+  	max-width: 500px;
+  	word-wrap: break-word;
+    overflow-wrap: break-word;
+  	  	
+}
+table {
+  border-collapse: collapse;
+  width:90%;
+  margin-left:auto; 
+  margin-right:auto;
+  table-layout:fluid;
+  } 
+
+th{
+	font-family: 'Oswald', sans-serif;
+	color: #EBE9DF;	
+	font-size:20px;
+	padding-bottom:8px;
+}
+.borderless.first{
+	padding-left:8px;
+}
+.wide {
+  width: 30%;
+}
+.wide2 {
+  width: 50%;
+}
+.wide3 {
+  width: 4%;
+}
+.wide4 {
+  width: 4%;
+}
+.wide5 {
+  width: 4%;
+}
+.marktable{
+	width:60%;
+	margin-left:auto; 
+    margin-right:auto;
+    margin-top: 70px;
+}
+.markform {
+  background: #3C577F;
+  border: none;
+  border-radius: 6px;
+  height: 235px;
+  padding-top: 20px;
+  margin: 0px auto 0;
+  width: 298px;
+  position: relative;
+  top: 1em;
+}
+.containerradio {
+    display: block;
+    position: relative;
+    padding-left: 85px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+	color: #EBE9DF;	
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.containerradio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.containerradio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.containerradio input:checked ~ .checkmark {
+    background-color: #7A60CC;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.containerradio input:checked ~ .checkmark:after {
+    display: block;
+}
+.containerradio .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.addgoalcontainer{
+  background: #3C577F;
+  border: none;
+  border-radius: 6px;
+  height: 400px;
+  margin: 0px auto 0;
+  width: 800px;
+  position: relative;
+  top: 6em;
+}
+.nameimput{
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-left: 65px;
+}
+.descriptionimput{
+	font-size: 14px;
+  	height:200px;
+    margin-left: 65px;
+    resize: none;
+}
+.logo{
+	width:9em;
+	position:float;
+	margin-top:20px;
+	margin-bottom:-60px;
+	margin-left:3%;
+}
+.mess{
+	color: white;
+	font-size:12px;
+}
+.successmsg{
+	position: float;
+	margin-left: 2em;
+	color: white;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"lang="pl-PL">
+
+	    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+	    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400i" rel="stylesheet"> 
+	    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	    
+
+<meta charset="ISO-8859-1">
+<title>Upward Spiral</title>
+<head>
+</head>
+<body>
+	<a href="setgoal"><embed class="logo"src="../img/logo.png"></a>
+
+  <form th:action="@{/logout}" method="get">
+         <button class="button logout" id="hide" type="Submit">Logout</button>
+   </form>
+   	
+   	<h2 class="form-signin-heading">Your Daily Progress</h2><br><br>
+   	
+	<div class="container">
+
+		<div id="container"
+			style="width: 650px; height: 400px; margin: 0 auto;"></div><br>
+	</div>
+	
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script th:inline="javascript">
+    $(function(){
+    Highcharts.chart('container', {
+        chart: {
+            backgroundColor: '#f6e7df',
+            borderRadius:'2em',
+            polar: true,
+            type: 'line'
+        },
+        title: {
+            text: '...'
+        },
+        subtitle: {
+            text: false
+        },
+        xAxis: {
+            categories: [[${graphMap.keySet()}]],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            max:5,
+            title: {
+                text: 'Your Marks'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} K</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Mark',
+            data: [[${graphMap.values()}]]
+        }]
+    });
+    });
+</script>
+
+</body>
+</html>
